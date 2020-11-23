@@ -6,5 +6,5 @@ This script will setup wordpress by using docker mariadb and wordpress.
 - Working internet connection
 
 # How to run
-$git clone https://github.com/ayiezola/setup-wordpress-by-docker.git
-$cd setup-wordpress-by-docker && bash setup.sh
+- $git clone https://github.com/ayiezola/setup-wordpress-by-docker.git
+- $cd setup-wordpress-by-docker && bash setup.sh
