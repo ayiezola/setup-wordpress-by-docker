@@ -26,6 +26,10 @@ docker pull wordpress
 #CreateaAt,Driver,Labels,MountPoint,Name,Options,Scope
 docker volume create mariadb-data
 
+#Create Folder
+mkdir mariadb
+mkdir wordpress
+
 #Create a symbolic link to an easier access location
 ls -s /var/lib/docker/volumes/mariadb-data/_data /mariadb
 
