@@ -9,10 +9,10 @@ echo "Please input your password:"
 read password
 
 #Update
-apt-get Update
+apt-get update
 
 #install docker
-apt-get install docker.io
+apt-get install docker.io -y
 
 #Download MariaDB docker image from repo
 docker pull mariadb
