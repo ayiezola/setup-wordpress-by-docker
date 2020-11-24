@@ -11,4 +11,4 @@ This script will setup wordpress by using docker mariadb and wordpress.
 
 https://i.imgur.com/8u2caas.png
 
-https://imgur.com/7FulTyZ
+https://i.imgur.com/7FulTyZ.png
