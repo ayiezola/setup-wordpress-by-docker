@@ -27,11 +27,11 @@ docker pull wordpress
 docker volume create mariadb-data
 
 #Create Folder
-mkdir mariadb
-mkdir wordpress
+#mkdir mariadb
+#mkdir wordpress
 
 #Create a symbolic link to an easier access location
-ls -s /var/lib/docker/volumes/mariadb-data/_data /mariadb
+ln -s /var/lib/docker/volumes/mariadb-data/_data /mariadb
 
 #Start a MariaDB container with persistent data storage
 #This command will crete as follow:
@@ -47,7 +47,7 @@ docker volume create wordpress-data
 #docker volume inspect wordpress-data
 
 #Create a symbolic link to an easier access location
-ls -s /var/lib/docker/volumes/wordpress-data/_data /wordpress
+ln -s /var/lib/docker/volumes/wordpress-data/_data /wordpress
 
 #Start a wordpress container with persistent data storage
 docker run -d --name wordpress -p 80:80 -v wordpress-data:/var/www/html --link wordpressdb:mysql -e WORDPRESS_DB_USER=wordpress -e "WORDPRESS_DB_PASSWORD=$password" -e WORDPRESS_DB_NAME=wordpress wordpress
@@ -57,12 +57,17 @@ docker run -d --name wordpress -p 80:80 -v wordpress-data:/var/www/html --link w
 #You installation interface will be available by using your IP/DOmain:
 echo "Your Public IP is :"
 curl ifconfig.me
-echo " "
+echo " \n"
 
 echo "Your local IP is:"
 ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
-echo " "
+echo " \n"
 
-
-
-
+# As a token of appriacation, you can buy 
+# VPS on Digital Ocean by using this link below:
+# ----> Use this link : https://m.do.co/c/bf565e6cf3bb
+# You can get $5USD Free in your account.
+# Just add your Credit Card on your Digital Ocean account.
+# Then you can play with VPS. Its good to learn.
+# Make sure you dstroy your droplet after finish.
+# Otherwise, your credit will lure/lost.
